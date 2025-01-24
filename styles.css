@@ -1,0 +1,459 @@
+/* General Reset */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f0f8ff; /* Light pastel blue for a pleasant background */
+    overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(70, 130, 180, 0.9); /* SteelBlue for a soothing tone */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.main-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+.navbar ul li {
+    margin: 0 10px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+.navbar ul li a:hover {
+    background: #4682b4; /* Deepened tone on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('home5.jpg');
+    height: 100vh;
+    background-size: cover; /* Makes the background image cover the entire section */
+    background-position: center center; /* Ensures the image is centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-attachment: fixed;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color:  #3498db;
+}
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: whitesmoke;
+}
+.btn-primary {
+    background: #3498db; 
+    color: white;   
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background: #2980b9;/* RoyalBlue for hover */
+}
+
+/* Features Section */
+.features-section {
+    background: #f9fafb; /* Softer background for a cleaner look */
+    padding: 60px 20px;
+    text-align: center;
+}
+.features-section h2 {
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 30px;
+    color: #2c3e50; /* Darker shade for better contrast */
+}
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap; /* Ensure responsiveness on smaller screens */
+    gap: 20px; /* More spacing between features */
+    max-width: 1200px; /* Restrict max width for better alignment */
+    margin: 0 auto; /* Center-align the content */
+}
+.feature {
+    background: #ffffff; /* White background for contrast */
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for effect */
+    border-radius: 10px; /* Softer corners */
+    flex: 1;
+    width: calc(50% - 30px); 
+    max-width: 300px;/* Three features per row on wider screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+.feature:hover {
+    transform: translateY(-12px); /* Adds depth effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+.feature h3 {
+    font-size: 1.4rem; /* Slightly larger headings */
+    margin-bottom: 15px;
+    color: #4682b4; /* Matches theme */
+}
+.feature p {
+    font-size: 1rem;
+    color: #555; /* Neutral text color */
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+    .features-container {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+    .feature {
+        max-width: 100%; /* Features stack vertically */
+    }
+}
+
+/* Call to Action Section */
+.call_to_action_section {
+    background-color: #4682b4;; /* No background color */
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff; /* Text color set to white for visibility */
+}
+
+.cta_heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* Ensuring heading is visible */
+}
+
+.cta_text {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; /* Ensuring text is white */
+}
+
+.cta_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.cta_button {
+    background-color: #ffffff;
+    color: #4a90e2; /* Updated button text color */
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff; /* Add border for a more prominent look */
+}
+
+.cta_button:hover {
+    background-color: #ffffff;
+    color: #4a90e2;
+    border-color: #4a90e2; /* Ensure border color matches text on hover */
+}
+
+.cta_button_secondary {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta_button_secondary:hover {
+    background-color: #ffffff;
+    color: #4a90e2;
+    border-color: #4a90e2; /* Ensure border color matches text on hover */
+}
+
+/* Additional Information Section */
+.cta_more_info {
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; /* Ensuring more info text is visible */
+}
+
+.cta_more_link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.cta_more_link:hover {
+    color: #4a90e2;
+    border-color: #4a90e2; /* Matches the link hover color */
+}
+
+
+
+/* Additional Styles for Other Pages */
+/* Input Page */
+.input-page {
+    padding: 50px 20px;
+    background: #f4f4f9;
+    text-align: center;
+}
+.input-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4682b4;
+}
+.input-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.input-form input, .input-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.input-form button {
+    background: #4682b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.input-form button:hover {
+    background: #4169e1;
+}
+
+/* Dashboard Page */
+.dashboard {
+    padding: 50px 20px;
+    background: #f4f4f9;
+}
+.dashboard h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4682b4;
+}
+.chart-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.chart {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Recommendations Page */
+.recommendations-page {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #e6f7ff, #ffffff); /* Subtle gradient */
+    text-align: center;
+}
+.recommendations-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4682b4;
+}
+.recommendations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.recommendation {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+.recommendation h3 {
+    color: #4682b4;
+    margin-bottom: 10px;
+}
+.recommendation p {
+    color: #555;
+}
+/* Footer Section */
+.footer_section {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 50px 20px;
+    font-size: 16px;
+}
+
+.footer_content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer_column {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 250px;
+}
+
+.footer_column h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #4a90e2;}
+
+.footer_column p,
+.footer_column ul,
+.footer_column a {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.footer_column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_column ul li {
+    margin-bottom: 8px;
+}
+
+.footer_column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer_column ul li a:hover {
+    color: #4a90e2;}
+
+.subscribe_form {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe_input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.subscribe_button {
+    padding: 10px 20px;
+    border: none;
+    color: #4a90e2;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s font-size 0.1s, color 0.3s;
+}
+
+.subscribe_button:hover {
+    background-color: #4a90e2; /* Changed background on hover */
+    color: #ffffff; /* Text color changes to white when hovered */
+    font-size: 18px; /* Increased font size on hover */
+}
+
+/* Copyright Section */
+.copyright_section {
+    background-color: #1a1919;
+    padding: 15px 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.copyright_section a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.copyright_section a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer_columns {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer_column {
+        min-width: unset;
+        flex: 1;
+    }
+}

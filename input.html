@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appliance Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Appliance Input</h1>
+                <p>Enter your appliance details to get started!</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <form action="/submit-usage" method="POST" class="input-form">
+                <label for="appliance">Appliance Type:</label>
+                <select id="appliance" name="appliance" required>
+                    <option value="refrigerator">Refrigerator</option>
+                    <option value="washing_machine">Washing Machine</option>
+                    <option value="air_conditioner">Air Conditioner</option>
+                </select>
+
+                <label for="mode">Mode:</label>
+                <select id="mode" name="mode" required>
+                    <option value="normal">Normal</option>
+                    <option value="eco">Eco</option>
+                    <option value="intensive">Intensive</option>
+                </select>
+
+                <label for="duration">Duration (hours):</label>
+                <input type="number" id="duration" name="duration" min="1" required>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Smart Resource Conservation</p>
+    </footer>
+</body>
+</html>
