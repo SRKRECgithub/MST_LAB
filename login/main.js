@@ -133,7 +133,7 @@ document.querySelector('.login').addEventListener('submit', (e) => {
     messageBox.style.color = "green";
 
     setTimeout(() => {
-        window.location.href = "../index.html"; // Redirect to dashboard
+        window.location.href = "../index.html"; 
     }, 1000);
 });
 
